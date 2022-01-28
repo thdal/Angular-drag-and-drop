@@ -1,0 +1,53 @@
+<div class="root">
+  <div class="navbar has-background-dark">
+    <div class="navbar-brand">
+      <div class="navbar-item">
+        <h1 class="app-name has-gradient-text">Drag & Drop</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="board">
+    <div class="board-bar">
+      <p class="board-name">board</p>
+    </div>
+
+    <div class="board-wrapper">
+      <div class="board-columns">
+        <div class="board-column"
+         cdkDropList
+           #todoList="cdkDropList"
+            [cdkDropListData]="todo"
+             [cdkDropListConnectedTo]="todoList"
+            (cdkDropListDropped)="drop($event)">
+
+          <div class="tasks-container">
+            <div class="task" *ngFor="let item of todo" cdkDrag>
+              <!--{{item}}-->
+              <mat-accordion>
+
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                                     (closed)="panelOpenState = false">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      Self aware panel
+                    </mat-panel-title>
+                    <mat-panel-description>
+                      Currently I am {{panelOpenState ? 'open' : 'closed'}}
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+                  <p>I'm visible because I am open</p>
+                </mat-expansion-panel>
+              </mat-accordion>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+</div>
