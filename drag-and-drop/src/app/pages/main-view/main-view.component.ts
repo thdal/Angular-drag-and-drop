@@ -13,7 +13,7 @@ export class MainViewComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  todo = ['Get to work', 'Pick up groceries', 'Go home', 'Fall asleep'];
+  todo = ['Couleur de la robe vin rouge expert', 'Intensité vin rouge expert', 'Transparence vin rouge expert', 'Limpidité vin rouge expert'];
 
   done = ['Get up', 'Brush teeth', 'Take a shower', 'Check e-mail', 'Walk dog'];
 

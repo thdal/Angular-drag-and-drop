@@ -24,21 +24,26 @@
           <div class="tasks-container">
             <div class="task" *ngFor="let item of todo" cdkDrag>
               <!--{{item}}-->
-              <mat-accordion>
+              <img style="cursor:pointer;" src="./assets/img/poignee.svg" class="poignee">
+              <mat-accordion style="width:100%; border-radius: 4px;
+      border: solid 1px #ffcbec;">
 
                 <mat-expansion-panel (opened)="panelOpenState = true"
                                      (closed)="panelOpenState = false">
                   <mat-expansion-panel-header>
                     <mat-panel-title>
-                      Self aware panel
+                      <span class="title">{{item}}</span>
                     </mat-panel-title>
                     <mat-panel-description>
-                      Currently I am {{panelOpenState ? 'open' : 'closed'}}
+                     <!--{{panelOpenState ? 'open' : 'closed'}}-->
                     </mat-panel-description>
                   </mat-expansion-panel-header>
-                  <p>I'm visible because I am open</p>
+                  <p>Step 1</p>
+                  <p>Step 2</p>
+                  <p>Step 3</p>
                 </mat-expansion-panel>
               </mat-accordion>
+              <img style="cursor:pointer;" src="./assets/img/voir.svg" class="poignee">
 
             </div>
           </div>
